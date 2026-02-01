@@ -1,6 +1,10 @@
 # Simulation-Avionique
 Mini projet en C
 
+
+
+# High level requirements
+
 HL-01 – Gestion d’engagement
 Le logiciel doit permettre au pilote d’engager/désengager le système.
 HL-02 – Validation capteurs
@@ -14,6 +18,8 @@ Le logiciel doit passer en mode FAILSAFE quand une faute critique survient.
 HL-06 – Traçabilité & testabilité
 Chaque exigence bas niveau doit être vérifiable par test.
 
+
+# Low level requirements
 
 Pour HL-01 (Engagement)
 LLR-01.1 Si pilot_engage = true et sensor_ok = true, alors le système doit passer de OFF à NORMAL au prochain cycle.
