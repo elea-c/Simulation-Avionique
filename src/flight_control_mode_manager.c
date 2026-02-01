@@ -175,14 +175,13 @@ static void mm_apply_state_transitions(ModeManager* mm, const Inputs* in) {
                     mm->mode = MODE_FAILSAFE;
                 }
             } else {
-                /* For mini-project: recover to NORMAL when fault clears */
                 mm->mode = MODE_NORMAL;
                 mm->invalid_persist_count = 0;
             }
             break;
 
         case MODE_FAILSAFE:
-            /* LLR-05.2: only exit through pilot_disengage (handled earlier) */
+            /* LLR-05.2: only exit through pilot_disengage */
             mm->mode = MODE_FAILSAFE;
             break;
 
@@ -227,7 +226,7 @@ static Outputs mm_step(ModeManager* mm, const Inputs* in) {
 
 static void expect(bool cond, const char* msg) {
     if (!cond) {
-        fprintf(stderr, "TEST FAILED: %s\n", msg);
+        fprintf("TEST FAILED: %s\n", msg);
         exit(1);
     }
 }
